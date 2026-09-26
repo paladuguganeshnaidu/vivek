@@ -2,106 +2,133 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="Vivek Motte — fictional product demo">
+<meta name="description" content="Vivek Motte — The Egg, Reimagined.">
 <title>Vivek Motte — The Egg, Reimagined.</title>
 <style>
-:root{--ink:#111817;--teal:#0a877e;--muted:#707b76;--line:#e7ebe8;--cream:#fffdf6;--mint:#e3f8f2;--shadow:0 24px 70px rgba(13,63,57,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 28px));margin:auto}
-.hero-reference{position:relative;width:100%;background:#fff}.hero-reference img{display:block;width:100%;height:auto;user-select:none}
-.hotspot{position:absolute;z-index:5;background:transparent;border:0;padding:0;border-radius:16px;cursor:pointer}
-.hotspot:focus-visible{outline:3px solid rgba(10,135,126,.45);outline-offset:2px}
-.hotspot:hover{background:rgba(10,135,126,.04)}
-.hot-home{left:31.5%;top:1.2%;width:6%;height:6%}.hot-product{left:39%;top:1.2%;width:6%;height:6%}.hot-nutrition{left:46%;top:1.2%;width:7.5%;height:6%}.hot-reviews{left:53.5%;top:1.2%;width:7%;height:6%}.hot-about{left:60%;top:1.2%;width:5.5%;height:6%}
-.hot-cart{left:81.5%;top:0.5%;width:5%;height:7%}.hot-order{left:87%;top:0.5%;width:10.5%;height:7%}.hot-add{left:4.5%;top:59.1%;width:19%;height:7.4%}.hot-video{left:24.7%;top:59.1%;width:13.5%;height:7.4%}
-.screen-helper{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;text-align:center;font-size:11px;color:rgba(0,0,0,.42);pointer-events:none}
-.section{padding:88px 0}.section h2{font-size:clamp(42px,6vw,74px);line-height:.9;letter-spacing:-.07em;margin:0 0 16px}.section p{color:var(--muted);line-height:1.65}
-.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.head p{max-width:460px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{border:1px solid var(--line);border-radius:22px;background:#fff;padding:26px;min-height:176px;box-shadow:0 10px 30px rgba(15,80,70,.05)}.card .icon{font-size:24px;margin-bottom:18px}.card b{display:block;margin-bottom:8px}
-.nutrition{background:linear-gradient(135deg,#f1fbf7,#fff8ec);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.nutrition-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}.nutrition-card{background:#101817;color:#fff;border-radius:30px;padding:48px}.nutrition-card h3{font-size:58px;line-height:.9;letter-spacing:-.07em;margin:18px 0}.nutrition-card p{color:#b6c1bd}.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}.num{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04);border-radius:16px;padding:16px}.num strong{display:block;font-size:25px}.num small{color:#a9b5b1}.egg-stage{border-radius:30px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#d9f4ec,#f5efe1 54%,#fff);min-height:450px}.egg{width:190px;height:245px;border-radius:54% 46% 50% 50%/61% 61% 39% 39%;background:linear-gradient(145deg,#fff9e1,#edbd67);box-shadow:inset -22px -28px 38px rgba(135,87,30,.16),0 28px 55px rgba(75,52,23,.20);transform:rotate(-7deg)}
-.product{display:grid;grid-template-columns:.95fr 1.05fr;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}.product-art{min-height:500px;display:grid;place-items:center;background:linear-gradient(145deg,#f0faf6,#fff2dc)}.pack{width:250px;height:330px;border-radius:48% 52% 55% 45%/62% 64% 36% 38%;background:linear-gradient(145deg,#fffdf6,#ebe2ce);display:grid;place-items:center;font-size:105px;font-weight:900;box-shadow:inset -18px -30px 36px rgba(0,0,0,.05),18px 27px 55px rgba(0,0,0,.10);transform:rotate(-6deg)}.product-copy{padding:50px}.price{font-size:31px;font-weight:900;margin:20px 0}.qty{display:flex;align-items:center;width:max-content;border:1px solid var(--line);border-radius:999px;overflow:hidden}.qty button{border:0;background:#fff;width:42px;height:42px}.qty span{min-width:34px;text-align:center}
-.story-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.ref-photo{overflow:hidden;border-radius:28px;border:1px solid var(--line);background:#fff}.ref-photo img{display:block;width:100%;height:100%;object-fit:cover}.story-copy{border:1px solid var(--line);border-radius:28px;padding:44px;background:#fff}.story-copy h3{font-size:58px;line-height:.9;letter-spacing:-.07em;margin:16px 0}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gallery figure{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;min-height:320px}.gallery img{width:100%;height:100%;min-height:320px;object-fit:cover;display:block}.gallery figure.cut{background:linear-gradient(145deg,#f4fbf7,#fff4e1);display:grid;place-items:center}.gallery figure.cut img{object-fit:contain;mix-blend-mode:multiply}.cta{border:1px solid var(--line);border-radius:30px;padding:52px;background:linear-gradient(120deg,#e0f8f2,#fff1df);display:flex;justify-content:space-between;align-items:end;gap:24px}.cta h2{font-size:60px;line-height:.9;letter-spacing:-.07em;margin:14px 0}.btn{border:1px solid #0b2a26;background:#fff;border-radius:999px;padding:14px 18px;font-weight:800}.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}.footer{padding:32px 0 62px;color:#73807a;font-size:12px}.foot{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:20px}
-.overlay{position:fixed;z-index:100;inset:0;background:rgba(5,18,16,.48);opacity:0;pointer-events:none;transition:.25s}.overlay.open{opacity:1;pointer-events:auto}.drawer{position:fixed;z-index:110;right:0;top:0;width:min(430px,100%);height:100%;background:#fff;transform:translateX(100%);transition:.28s;padding:28px;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}.close{border:0;background:transparent;font-size:28px}.cart-items{flex:1;overflow:auto}.cart-item{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:15px 0}.mini-egg{width:62px;height:70px;border-radius:50%;background:linear-gradient(145deg,#fff5d5,#e6b55f);display:grid;place-items:center;font-weight:900}.controls{display:flex;align-items:center;gap:8px;margin-top:6px}.controls button{width:26px;height:26px;border:1px solid var(--line);background:#fff;border-radius:50%}.total{border-top:1px solid var(--line);padding-top:15px}.row{display:flex;justify-content:space-between;margin:8px 0}.checkout{width:100%;margin-top:10px;padding:14px;border:0;background:var(--teal);color:#fff;border-radius:999px;font-weight:850}
+:root{--ink:#111817;--teal:#087f76;--teal2:#129b8f;--muted:#6f7975;--line:#e9ece9;--cream:#fffdf7;--mint:#e5f8f3;--gold:#f2bd6b;--shadow:0 24px 70px rgba(13,63,57,.11)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.wrap{width:min(1240px,calc(100% - 32px));margin:auto}.section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:34px}.section-head h2{font-size:clamp(44px,6vw,76px);line-height:.9;letter-spacing:-.075em;margin:0}.section-head p{max-width:480px;color:var(--muted);line-height:1.65;margin:0}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #d8eee8;background:var(--mint);color:#176d65;border-radius:999px;padding:9px 14px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.btn{border:1px solid #dfe6e2;background:#fff;border-radius:999px;padding:14px 20px;font-weight:800;transition:.2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.08)}.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.hero{position:relative;background:#fff;line-height:0;overflow:hidden}.hero img{display:block;width:100%;height:auto;user-select:none}.hotspot{position:absolute;z-index:4;border:0;background:transparent;padding:0;border-radius:14px}.hotspot:focus-visible{outline:3px solid rgba(8,127,118,.55);outline-offset:2px}.hotspot:hover{background:rgba(8,127,118,.045)}
+.hot-home{left:31%;top:1%;width:6.5%;height:6.5%}.hot-product{left:38.7%;top:1%;width:6.8%;height:6.5%}.hot-nutrition{left:45.8%;top:1%;width:7.7%;height:6.5%}.hot-reviews{left:53.6%;top:1%;width:7%;height:6.5%}.hot-about{left:60.7%;top:1%;width:6%;height:6.5%}.hot-cart{left:81%;top:0%;width:5.3%;height:8%}.hot-order{left:87%;top:0%;width:10.5%;height:8%}.hot-add{left:4.5%;top:59%;width:19%;height:7.7%}.hot-video{left:24.4%;top:59%;width:14%;height:7.7%}
+.features{padding:22px 0 0}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{border:1px solid var(--line);border-radius:24px;background:#fff;padding:24px;min-height:168px;box-shadow:0 12px 35px rgba(15,80,70,.045)}.feature-icon{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:#f2fbf7;font-size:22px;margin-bottom:20px}.feature b{display:block;font-size:17px;margin-bottom:8px}.feature span{color:var(--muted);font-size:14px;line-height:1.5}
+.product-section{background:linear-gradient(135deg,#f2fbf8 0%,#fff8ec 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.product-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(17,24,23,.08);border-radius:32px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}.product-art{min-height:540px;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 45%,#d9f5ee,#f7f0df 56%,#fff)}.egg-pack{width:245px;height:335px;border-radius:54% 46% 50% 50%/62% 64% 36% 38%;background:linear-gradient(145deg,#fffdf5,#eadfc9);display:grid;place-items:center;font-size:110px;font-weight:950;box-shadow:inset -22px -32px 42px rgba(0,0,0,.055),18px 30px 60px rgba(72,52,22,.13);transform:rotate(-7deg)}.product-art:after{content:"206g Protein";position:absolute;right:8%;top:10%;border:1px solid #d8eee8;background:#f7fffc;color:#087f76;border-radius:999px;padding:12px 16px;font-weight:900;transform:rotate(5deg)}.product-copy{padding:56px}.product-copy h3{font-size:54px;letter-spacing:-.065em;line-height:.9;margin:18px 0 12px}.product-copy p{color:var(--muted);line-height:1.65;max-width:440px}.price{font-size:32px;font-weight:950;margin:24px 0}.price small{font-size:12px;color:var(--muted);font-weight:600}.buy-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden}.qty button{width:43px;height:43px;border:0;background:#fff}.qty span{min-width:34px;text-align:center;font-weight:800}
+.nutrition-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.nutrition-board{border-radius:30px;background:#101817;color:#fff;padding:48px}.nutrition-board h3{font-size:60px;line-height:.9;letter-spacing:-.075em;margin:18px 0}.nutrition-board p{color:#b9c4c0;line-height:1.6}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}.number{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:17px;padding:17px}.number strong{display:block;font-size:27px}.number small{color:#a9b5b1}.egg-stage{border-radius:30px;min-height:450px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#d9f4ec,#f5efe1 54%,#fff)}.egg{width:185px;height:245px;border-radius:54% 46% 50% 50%/61% 61% 39% 39%;background:linear-gradient(145deg,#fff9e1,#edbd67);box-shadow:inset -22px -28px 38px rgba(135,87,30,.16),0 28px 55px rgba(75,52,23,.2);transform:rotate(-7deg)}
+.reviews{background:#fbfcfa}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.review{border:1px solid var(--line);border-radius:25px;background:#fff;padding:28px}.stars{color:#e8a63e;letter-spacing:2px}.review p{font-size:16px;line-height:1.65;color:#505b56}.review b{font-size:13px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.about-main,.about-side{border:1px solid var(--line);border-radius:30px;padding:46px;background:#fff}.about-main{background:linear-gradient(135deg,#eefaf7,#fff3df)}.about-main h3{font-size:60px;line-height:.9;letter-spacing:-.075em;margin:18px 0}.about-main p,.about-side p{color:var(--muted);line-height:1.65}.about-side{background:#101817;color:#fff}.about-side p{color:#b9c4c0}.about-side strong{font-size:44px;display:block;margin-top:28px}
+.cta{border-radius:32px;padding:52px;background:linear-gradient(120deg,#e0f8f2,#fff0da);display:flex;align-items:end;justify-content:space-between;gap:24px}.cta h2{font-size:62px;line-height:.9;letter-spacing:-.075em;margin:16px 0}.cta p{color:var(--muted);max-width:620px;line-height:1.6}
+footer{padding:34px 0 70px;color:#73807a;font-size:12px}.foot{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:20px}
+.overlay{position:fixed;z-index:100;inset:0;background:rgba(5,18,16,.48);opacity:0;pointer-events:none;transition:.25s}.overlay.open{opacity:1;pointer-events:auto}.drawer{position:fixed;z-index:110;right:0;top:0;width:min(440px,100%);height:100%;background:#fff;transform:translateX(100%);transition:.28s;padding:28px;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.12)}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}.close{border:0;background:transparent;font-size:28px}.cart-items{flex:1;overflow:auto}.cart-item{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:15px 0}.mini-egg{width:62px;height:70px;border-radius:50%;background:linear-gradient(145deg,#fff5d5,#e6b55f);display:grid;place-items:center;font-weight:950}.controls{display:flex;align-items:center;gap:8px;margin-top:6px}.controls button{width:27px;height:27px;border:1px solid var(--line);background:#fff;border-radius:50%}.total{border-top:1px solid var(--line);padding-top:15px}.row{display:flex;justify-content:space-between;margin:8px 0}.checkout{width:100%;margin-top:10px;padding:14px;border:0;background:var(--teal);color:#fff;border-radius:999px;font-weight:850}
 .modal{display:none;position:fixed;z-index:120;inset:0;background:rgba(5,18,16,.48);place-items:center;padding:20px}.modal.open{display:grid}.modal-box{width:min(620px,100%);background:#fff;border-radius:28px;padding:32px}.modal-box h3{font-size:56px;line-height:.9;letter-spacing:-.07em;margin:16px 0}.form{display:grid;gap:10px}.form input,.form textarea,.form select{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfa;outline:0}.success{display:none;text-align:center;padding:30px 0 5px}.success.show{display:block}.ok{width:72px;height:72px;border-radius:50%;background:var(--mint);color:var(--teal);display:grid;place-items:center;font-size:34px;margin:auto}
-@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.nutrition-grid,.product,.story-grid{grid-template-columns:1fr}.product-copy,.story-copy,.nutrition-card{padding:34px}.cta{display:block}.gallery{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.section{padding:64px 0}.head{display:block}.cards,.gallery{grid-template-columns:1fr}.hero-reference{overflow:hidden}.hotspot:hover{background:transparent}.nutrition-card h3,.story-copy h3,.cta h2,.modal-box h3{font-size:47px}.foot{display:block}.foot span{display:block;margin-bottom:7px}}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr 1fr}.product-card,.nutrition-grid,.about-grid{grid-template-columns:1fr}.product-art{min-height:420px}.product-copy,.nutrition-board,.about-main,.about-side{padding:34px}.review-grid{grid-template-columns:1fr}.cta{display:block}}
+@media(max-width:620px){.wrap{width:min(100% - 22px,1240px)}.section{padding:66px 0}.section-head{display:block}.section-head h2{margin-bottom:18px}.feature-grid{grid-template-columns:1fr}.hero{overflow:hidden}.hotspot:hover{background:transparent}.product-copy h3,.nutrition-board h3,.about-main h3,.cta h2,.modal-box h3{font-size:47px}.product-art{min-height:350px}.egg-pack{width:190px;height:265px;font-size:88px}.nutrition-board{padding:30px}.numbers{gap:8px}.number{padding:14px}.foot{display:block}.foot span{display:block;margin-bottom:7px}}
 </style>
 </head>
 <body>
-<section class="hero-reference" id="home" aria-label="Vivek Motte exact landing page reference">
-  <img src="assets/landing-reference.webp" alt="Vivek Motte landing page">
-  <button class="hotspot hot-home" aria-label="Home" onclick="window.scrollTo({top:0,behavior:'smooth'})"></button>
-  <button class="hotspot hot-product" aria-label="Product" onclick="document.getElementById('product').scrollIntoView({behavior:'smooth'})"></button>
-  <button class="hotspot hot-nutrition" aria-label="Nutrition" onclick="document.getElementById('nutrition').scrollIntoView({behavior:'smooth'})"></button>
-  <button class="hotspot hot-reviews" aria-label="Reviews" onclick="document.getElementById('reviews').scrollIntoView({behavior:'smooth'})"></button>
-  <button class="hotspot hot-about" aria-label="About" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})"></button>
+
+<main>
+<section class="hero" id="home" aria-label="Vivek Motte landing page">
+  <img src="https://paladuguganeshnaidu.github.io/vivek/assets/landing-reference.webp" alt="Vivek Motte — The Egg, Reimagined.">
+  <button class="hotspot hot-home" aria-label="Home" onclick="go('home')"></button>
+  <button class="hotspot hot-product" aria-label="Product" onclick="go('product')"></button>
+  <button class="hotspot hot-nutrition" aria-label="Nutrition" onclick="go('nutrition')"></button>
+  <button class="hotspot hot-reviews" aria-label="Reviews" onclick="go('reviews')"></button>
+  <button class="hotspot hot-about" aria-label="About" onclick="go('about')"></button>
   <button class="hotspot hot-cart" aria-label="Open cart" onclick="openCart()"></button>
   <button class="hotspot hot-order" aria-label="Order now" onclick="addToCart();openCart()"></button>
-  <button class="hotspot hot-add" aria-label="Add to cart" onclick="addToCart()"></button>
-  <button class="hotspot hot-video" aria-label="Explore photos" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})"></button>
+  <button class="hotspot hot-add" aria-label="Add Vivek Egg to cart" onclick="addToCart()"></button>
+  <button class="hotspot hot-video" aria-label="View product section" onclick="go('product')"></button>
 </section>
 
+<section class="features"><div class="wrap"><div class="feature-grid">
+  <article class="feature"><div class="feature-icon">💪</div><b>206g Protein</b><span>High-protein positioning built into the visual identity.</span></article>
+  <article class="feature"><div class="feature-icon">👜</div><b>1000g Net Weight</b><span>A bold pack specification carried across the experience.</span></article>
+  <article class="feature"><div class="feature-icon">🌿</div><b>Premium Quality</b><span>Clean, minimal presentation with a warm natural palette.</span></article>
+  <article class="feature"><div class="feature-icon">♥</div><b>Everyday Nutrition</b><span>A simple product story designed for everyday use.</span></article>
+</div></div></section>
+
+<section class="section product-section" id="product"><div class="wrap">
+  <div class="section-head"><h2>Meet the<br>Vivek Egg.</h2><p>A polished product experience around the same visual language as the hero: cream, teal, warm highlights, soft shadows and large confident typography.</p></div>
+  <div class="product-card">
+    <div class="product-art"><div class="egg-pack">V</div></div>
+    <div class="product-copy">
+      <span class="pill">Signature product</span>
+      <h3>Vivek Egg</h3>
+      <p>A concept product pack built around the 1000g / 206g visual specification shown in the landing artwork.</p>
+      <div class="price">₹499 <small>/ demo pack</small></div>
+      <div class="buy-row"><div class="qty"><button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button></div><button class="btn primary" onclick="addToCart()">Add to cart →</button></div>
+      <button class="btn" style="width:100%;margin-top:10px" onclick="openCart()">Open cart</button>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="nutrition"><div class="wrap">
+  <div class="section-head"><h2>Numbers made<br>beautiful.</h2><p>The nutrition board mirrors the reference design and keeps the large-number storytelling front and centre.</p></div>
+  <div class="nutrition-grid">
+    <div class="nutrition-board"><span class="pill">Nutrition board</span><h3>206g.<br>1000g.</h3><p>Visual specifications from the concept artwork. For a real product, replace demo values with verified packaging and nutrition information.</p>
+      <div class="numbers"><div class="number"><strong>206g</strong><small>Protein*</small></div><div class="number"><strong>1000g</strong><small>Net weight*</small></div><div class="number"><strong>01</strong><small>Hero product</small></div><div class="number"><strong>₹499</strong><small>Demo price</small></div></div>
+    </div>
+    <div class="egg-stage"><div class="egg"></div></div>
+  </div>
+</div></section>
+
+<section class="section reviews" id="reviews"><div class="wrap">
+  <div class="section-head"><h2>Made for<br>the everyday.</h2><p>A production-ready review surface for the brand. These are sample UI reviews for the demo and should be replaced with verified customer feedback before launch.</p></div>
+  <div class="review-grid">
+    <article class="review"><div class="stars">★★★★★</div><p>“The visual identity feels premium without becoming complicated. Everything is easy to find.”</p><b>— Sample customer</b></article>
+    <article class="review"><div class="stars">★★★★★</div><p>“The product story is clear, the cart is simple, and the whole page feels fast.”</p><b>— Sample customer</b></article>
+    <article class="review"><div class="stars">★★★★★</div><p>“A clean nutrition-first experience with a strong personality.”</p><b>— Sample customer</b></article>
+  </div>
+</div></section>
+
 <section class="section" id="about"><div class="wrap">
-  <div class="head"><div><h2>Same visual.<br>Real interaction.</h2></div><p>The first screen above is the exact uploaded landing artwork. The transparent interaction layer makes the nav and CTAs work without changing the artwork itself.</p></div>
-  <div class="cards">
-    <article class="card"><div class="icon">💪</div><b>206g Protein</b><p>Fictional demo specification used by the concept.</p></article>
-    <article class="card"><div class="icon">◫</div><b>1000g Net Weight</b><p>Fictional pack specification used by the concept.</p></article>
-    <article class="card"><div class="icon">🌿</div><b>Minimal System</b><p>Cream, teal, warm egg tones, rounded cards and soft shadows.</p></article>
-    <article class="card"><div class="icon">🛒</div><b>Working Cart</b><p>Add, edit quantities, checkout and generate a demo order ID.</p></article>
+  <div class="section-head"><h2>Simple idea.<br>Strong identity.</h2><p>Vivek Motte combines a bold product story with a friendly, premium visual system designed to work from mobile screens through desktop displays.</p></div>
+  <div class="about-grid">
+    <div class="about-main"><span class="pill">Brand language</span><h3>Same energy.<br>More personality.</h3><p>Warm egg tones, teal accents, oversized type, soft cards and a human-led hero composition create the core system. The landing artwork remains the first visual touchpoint.</p></div>
+    <div class="about-side"><span class="pill">Experience</span><p>Responsive layout, accessible controls, persistent cart state, quantity controls and a local demo checkout are included.</p><strong>01<br><span style="font-size:14px;color:#b9c4c0;font-weight:600">signature product</span></strong></div>
   </div>
 </div></section>
 
-<section class="section nutrition" id="nutrition"><div class="wrap"><div class="nutrition-grid">
-  <div class="nutrition-card"><span class="pill">Nutrition board</span><h3>Numbers made beautiful.</h3><p>Illustrative demo values only. Replace them with verified packaging information before any real-world use.</p>
-    <div class="nums"><div class="num"><strong>206g</strong><small>Protein*</small></div><div class="num"><strong>1000g</strong><small>Net weight*</small></div><div class="num"><strong>01</strong><small>Hero product</small></div><div class="num"><strong>₹499</strong><small>Demo price</small></div></div>
-  </div>
-  <div class="egg-stage"><div class="egg"></div></div>
+<section class="section" style="padding-top:0"><div class="wrap"><div class="cta">
+  <div><span class="pill">Vivek Motte</span><h2>Order the egg.</h2><p>Tap the order button in the hero or add the product below. The demo cart persists across refreshes and the checkout generates a local order ID.</p></div>
+  <button class="btn primary" onclick="addToCart();openCart()">Order Vivek Egg →</button>
 </div></div></section>
-
-<section class="section" id="product"><div class="wrap">
-  <div class="head"><h2>Meet the<br>Vivek Egg.</h2><p>A front-end demo product flow with quantity control, cart drawer, localStorage persistence and checkout.</p></div>
-  <div class="product"><div class="product-art"><div class="pack">V</div></div><div class="product-copy">
-    <span class="pill">Signature product</span><h3>Vivek Egg</h3><p>Fictional 1000g hero pack with a 206g protein demo specification.</p><div class="price">₹499 <small style="font-size:12px;color:var(--muted)">/ demo pack</small></div>
-    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><div class="qty"><button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button></div><button class="btn primary" onclick="addToCart()">Add to cart →</button></div>
-    <button class="btn" style="width:100%;margin-top:10px" onclick="openCart()">Open cart</button>
-  </div></div>
-</div></section>
-
-<section class="section" id="story"><div class="wrap">
-  <div class="head"><h2>Your photos.<br>Your visual language.</h2><p>The uploaded classroom photos are kept as supporting brand-story material. The pointing portrait has a transparent background and is used as a clean cutout.</p></div>
-  <div class="story-grid"><div class="ref-photo"><img src="assets/landing-reference.webp" alt="Exact landing reference"></div><div class="story-copy"><span class="pill">Reference locked</span><h3>Pastel.<br>Minimal.<br>Confident.</h3><p>Large black type, green accents, warm egg highlights, generous whitespace and a human portrait collage.</p><button class="btn primary" onclick="scrollToProduct()">Build the order flow →</button></div></div>
-</div></section>
-
-<section class="section"><div class="wrap"><div class="gallery">
-  <figure class="cut"><img src="assets/vivek-hero.webp" alt="Vivek Motte cutout portrait"></figure>
-  <figure><img src="assets/reference-hero.webp" alt="Vivek Motte visual reference"></figure>
-  <figure><img src="assets/close-camera.jpg" alt="Vivek classroom portrait"></figure>
-</div></div></section>
-
-<section class="section" style="padding-top:10px"><div class="wrap"><div class="cta"><div><span class="pill">Ready when you are</span><h2>Order the egg.</h2><p>This is still a static demo, but the interaction is real: cart state survives refresh, checkout validates, and an order ID is generated locally.</p></div><button class="btn primary" onclick="addToCart()">Order Vivek Egg →</button></div></div></section>
 </main>
 
-<footer class="footer"><div class="wrap"><div class="foot"><span>© 2026 Vivek Motte — fictional demo concept.</span><span>For GitHub Pages / static hosting.</span></div></div></footer>
+<footer><div class="wrap"><div class="foot"><span>© 2026 Vivek Motte — concept experience.</span><span>Built as a static production-ready demo.</span></div></div></footer>
 
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
-<aside class="drawer" id="drawer"><div class="drawer-head"><b>Your cart</b><button class="close" onclick="closeCart()">×</button></div><div class="cart-items" id="items"></div><div class="total"><div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div><div class="row"><span>Demo delivery</span><span>₹0</span></div><div class="row"><b>Total</b><b id="total">₹0</b></div><button class="checkout" onclick="checkout()">Proceed to checkout →</button></div></aside>
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><b>Your cart</b><button class="close" aria-label="Close cart" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="items"></div>
+  <div class="total"><div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div><div class="row"><span>Delivery</span><span>₹0</span></div><div class="row"><b>Total</b><b id="total">₹0</b></div><button class="checkout" onclick="checkout()">Proceed to checkout →</button></div>
+</aside>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" style="float:right" onclick="closeCheckout()">×</button><div id="formview"><span class="pill">Demo checkout</span><h3>Almost<br>there.</h3><form class="form" onsubmit="placeOrder(event)"><input id="name" required placeholder="Full name"><input id="email" required type="email" placeholder="Email address"><input id="phone" required placeholder="Phone number"><textarea id="address" required rows="3" placeholder="Delivery address"></textarea><select><option>UPI — demo</option><option>Card — demo</option><option>Cash on delivery — demo</option></select><button class="btn primary">Place demo order →</button></form></div><div class="success" id="success"><div class="ok">✓</div><span class="pill">Order confirmed</span><h3>Nice. It's done.</h3><p id="orderText" style="color:var(--muted)"></p><button class="btn primary" onclick="closeCheckout()">Continue shopping</button></div></div></div>
+<div class="modal" id="modal"><div class="modal-box">
+  <button class="close" style="float:right" onclick="closeCheckout()">×</button>
+  <div id="formview"><span class="pill">Demo checkout</span><h3>Almost<br>there.</h3>
+    <form class="form" onsubmit="placeOrder(event)"><input id="name" required placeholder="Full name"><input id="email" required type="email" placeholder="Email address"><input id="phone" required placeholder="Phone number"><textarea id="address" required rows="3" placeholder="Delivery address"></textarea><select><option>UPI — demo</option><option>Card — demo</option><option>Cash on delivery — demo</option></select><button class="btn primary">Place demo order →</button></form>
+  </div>
+  <div class="success" id="success"><div class="ok">✓</div><span class="pill">Order confirmed</span><h3>Nice. It's done.</h3><p id="orderText" style="color:var(--muted)"></p><button class="btn primary" onclick="closeCheckout()">Continue shopping</button></div>
+</div></div>
 
 <script>
 const PRICE=499;
-let qty=Number(localStorage.getItem('vivek-qty')||1), cart=Number(localStorage.getItem('vivek-cart')||0);
+let qty=Number(localStorage.getItem('vivek-qty')||1);
+let cart=Number(localStorage.getItem('vivek-cart')||0);
 const money=n=>'₹'+n.toLocaleString('en-IN');
-function save(){localStorage.setItem('vivek-qty',qty);localStorage.setItem('vivek-cart',cart)}
-function setQty(){document.getElementById('qty').textContent=qty}
+const save=()=>{localStorage.setItem('vivek-qty',qty);localStorage.setItem('vivek-cart',cart)};
+const setQty=()=>document.getElementById('qty').textContent=qty;
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'})}
 function changeQty(n){qty=Math.max(1,qty+n);setQty();save()}
 function addToCart(){cart+=qty;qty=1;setQty();save();renderCart()}
 function renderCart(){
-  document.getElementById('count').textContent=cart;
   document.getElementById('items').innerHTML=cart
-   ? '<div class="cart-item"><div class="mini-egg">V</div><div><b>Vivek Egg</b><small style="display:block;color:#73807a">₹499 / demo pack</small><div class="controls"><button onclick="cart=Math.max(0,cart-1);save();renderCart()">−</button><span>'+cart+'</span><button onclick="cart++;save();renderCart()">+</button></div></div><strong>'+money(PRICE*cart)+'</strong></div>'
-   : '<div style="padding:55px 0;text-align:center;color:#74807b">Your cart is empty.<br><br>Add a Vivek Egg to begin.</div>';
+    ? '<div class="cart-item"><div class="mini-egg">V</div><div><b>Vivek Egg</b><small style="display:block;color:#73807a">₹499 / demo pack</small><div class="controls"><button onclick="cart=Math.max(0,cart-1);save();renderCart()">−</button><span>'+cart+'</span><button onclick="cart++;save();renderCart()">+</button></div></div><strong>'+money(PRICE*cart)+'</strong></div>'
+    : '<div style="padding:55px 0;text-align:center;color:#74807b">Your cart is empty.<br><br>Add a Vivek Egg to begin.</div>';
   document.getElementById('subtotal').textContent=money(PRICE*cart);
   document.getElementById('total').textContent=money(PRICE*cart);
 }
@@ -110,7 +137,7 @@ function closeCart(){document.getElementById('drawer').classList.remove('open');
 function checkout(){if(!cart)return;closeCart();document.getElementById('modal').classList.add('open')}
 function closeCheckout(){document.getElementById('modal').classList.remove('open')}
 function placeOrder(e){e.preventDefault();const id='VM-'+Math.random().toString(36).slice(2,8).toUpperCase();document.getElementById('orderText').textContent='Demo order '+id+' created for '+document.getElementById('name').value+'. No payment was processed.';document.getElementById('formview').style.display='none';document.getElementById('success').classList.add('show');cart=0;save();renderCart()}
-function scrollToProduct(){document.getElementById('product').scrollIntoView({behavior:'smooth'})}
 setQty();renderCart();
 </script>
-</body></html>
+</body>
+</html>
