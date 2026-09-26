@@ -1,26 +1,31 @@
-# Vivek Motte — GitHub Pages Demo
+# vivek — D2C Storefront Demo
 
-A polished, responsive fictional D2C storefront for the Vivek Motte / Vivek Egg concept.
+A polished, responsive fictional storefront for the Vivek Motte / Vivek Egg concept.
 
 ## Included
-- Minimal cream + teal visual system
-- Background-free hero portrait treatment
-- Uploaded landing concept reference image
-- Animated section reveal and nav tabs
-- Product quantity controls
-- localStorage cart persistence
-- Cart drawer
-- Demo checkout and generated order ID
-- Mobile responsive layout
-- No framework or build step
 
-## Demo values
-- 206g protein — fictional demo specification
-- 1000g net weight — fictional demo specification
-- ₹499 — fictional demo price
+- Cream-and-teal visual system.
+- Responsive landing page and product presentation.
+- Quantity controls and localStorage cart persistence.
+- Cart drawer, demo checkout, and generated order ID.
+- GitHub Pages deployment workflow.
 
-## GitHub Pages
-A Pages workflow is included. Enable **Settings → Pages → Source: GitHub Actions** once in the repository settings, then pushes to `main` can deploy automatically.
+## Demo data
 
-## Important
-This is a fictional demo. Nutritional figures, price, reviews and ordering are illustrative and no real payment or fulfillment occurs.
+All nutritional figures, prices, reviews, product details, and order flows are fictional and illustrative. No real payment or fulfillment occurs.
+
+## Run locally
+
+This is a static site with no framework or build step. Open `index.html` directly or serve the directory with a static server:
+
+```bash
+npx serve .
+```
+
+## Deployment
+
+Enable **Settings → Pages → Source: GitHub Actions** in the repository settings. Pushes to `main` can then deploy through the included workflow.
+
+## License
+
+See [LICENSE](LICENSE) if present.
